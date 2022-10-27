@@ -102,13 +102,13 @@ sub {
 
 .win_container>.chicken {
     position: absolute;
-    bottom: 60px;
-    left: 140px;
-    width: 220px;
-    height: 220px;
+    bottom: -29px;
+    left: 50px;
+    width: 400px;
+    height: 400px;
     background-image: url(/files/img/hud_elements/win_ct_chicken.png);
-    background-size: 90%;
-    rotate: 180deg;
+    background-size: 100%;
+    /* rotate: 180deg; */
     background-repeat: no-repeat;
     background-position: center;
     display: none;
