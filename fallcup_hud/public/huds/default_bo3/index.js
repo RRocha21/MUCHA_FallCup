@@ -685,6 +685,7 @@ function fillPlayer(player, nr, side, max) {
         }
 
     } else if (player.observer_slot < 10) {
+        player_name = player.name;
         if (player_name.length > 10) player_name = player_name.substring(0, 10);
         $top.find(".player_name").html(player_name.split(" ").join(""));
 
@@ -726,7 +727,7 @@ function fillPlayer(player, nr, side, max) {
 
     } else if (player.observer_slot == 10) {
 
-
+        player_name = player.name;
         if (player_name.length > 10) player_name = player_name.substring(0, 10);
         $top.find(".player_name").html(player_name.split(" ").join(""));
 
