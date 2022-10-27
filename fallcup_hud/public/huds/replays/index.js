@@ -646,7 +646,7 @@ function fillPlayer(player, nr, side, max) {
     if (player.observer_slot <= 5) {
 
         player_name = player.name;
-        if (player_name.length > 13) player_name = player_name.substring(0, 10);
+        if (player_name.length > 10) player_name = player_name.substring(0, 10);
         $top.find(".player_name").html(player_name.split(" ").join(""));
 
         $player.find(".number").html(player.observer_slot);
@@ -685,7 +685,8 @@ function fillPlayer(player, nr, side, max) {
         }
 
     } else if (player.observer_slot < 10) {
-        $top.find(".player_name").html(player.name.split(" ").join(""));
+        if (player_name.length > 10) player_name = player_name.substring(0, 10);
+        $top.find(".player_name").html(player_name.split(" ").join(""));
 
         $player.find(".number").html(player.observer_slot);
 
@@ -726,7 +727,8 @@ function fillPlayer(player, nr, side, max) {
     } else if (player.observer_slot == 10) {
 
 
-        $top.find(".player_name").html(player.name.split(" ").join(""));
+        if (player_name.length > 10) player_name = player_name.substring(0, 10);
+        $top.find(".player_name").html(player_name.split(" ").join(""));
 
         $player.find(".number").html("0");
 
