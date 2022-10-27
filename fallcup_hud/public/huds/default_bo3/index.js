@@ -1906,32 +1906,41 @@ function updatePage(data) {
         function startAnimationWinner(side, name, gameside) {
 
             if (gameside == "ct") {
+                $(".win_container > .chicken").css("background-image", "url(../../files/img/hud_elements/Folha_CT_Win.png)");
                 //$(".win_container > .chicken").css("background-image", "url(/files/img/hud_elements/win_ct_chicken.png)");
-                $(".win_container > .chicken_4").css("background-image", "url(../../files/img/hud_elements/Folha_CT.png)");
-                $(".win_container > .chicken_5").css("background-image", "url(../../files/img/hud_elements/Folha_CT.png)");
-                $(".win_container > .chicken_6").css("background-image", "url(../../files/img/hud_elements/Folha_CT.png)");
-                $(".win_container > .chicken_7").css("background-image", "url(../../files/img/hud_elements/Folha_CT.png)");
+                // $(".win_container > .chicken_4").css("background-image", "url(../../files/img/hud_elements/Folha_CT.png)");
+                // $(".win_container > .chicken_5").css("background-image", "url(../../files/img/hud_elements/Folha_CT.png)");
+                // $(".win_container > .chicken_6").css("background-image", "url(../../files/img/hud_elements/Folha_CT.png)");
+                // $(".win_container > .chicken_7").css("background-image", "url(../../files/img/hud_elements/Folha_CT.png)");
+                // $(".win_container > .chicken_4").css("transform","scaleX(1)");
+                // $(".win_container > .chicken_5").css("transform","rotate(245deg)");
+                // $(".win_container > .chicken_6").css("transform","rotate(120deg)");
+                // $(".win_container > .chicken_7").css("transform","rotate(180deg)");
                 $(".win_container>.bg_container>.bg").css("border", "solid 3px rgb(" + ct_color + ")");
                 $(".win_container>.bg_container>.bg").css("box-shadow", "inset 0px 0px 15px 7px rgb(" + ct_color + ")");
                 $(".win_container>.bg_container>.text").css("color", " rgb(" + ct_color + ")")
                 $(".win_container>.bg_container>.bg").css("background-image", "url(../../files/img/hud_elements/Textura_CT_2.png)");
-                $(".win_container > .chicken_4").css("display", "block").css("animation", "chickenIn 0.4s ease-out forwards");
-                $(".win_container > .chicken_5").css("display", "block").css("animation", "chickenIn 0.4s ease-out forwards");
-                $(".win_container > .chicken_6").css("display", "block").css("animation", "chickenIn 0.4s ease-out forwards");
-                $(".win_container > .chicken_7").css("display", "block").css("animation", "chickenIn 0.4s ease-out forwards");
+                // $(".win_container > .chicken_4").css("display", "block").css("animation", "chickenIn 0.4s ease-out forwards");
+                // $(".win_container > .chicken_5").css("display", "block").css("animation", "chickenIn 0.4s ease-out forwards");
+                // $(".win_container > .chicken_6").css("display", "block").css("animation", "chickenIn 0.4s ease-out forwards");
+                // $(".win_container > .chicken_7").css("display", "block").css("animation", "chickenIn 0.4s ease-out forwards");
             } else if (gameside == "t") {
                 //$(".win_container > .chicken").css("background-image", "url(/files/img/hud_elements/win_t_chicken.png)");
-                $(".win_container > .chicken").css("background-image", "url(../../files/img/hud_elements/Folha_T.png)");
-                $(".win_container > .chicken_2").css("background-image", "url(../../files/img/hud_elements/Folha_T.png)");
-                $(".win_container > .chicken_3").css("background-image", "url(../../files/img/hud_elements/Folha_T.png)");
+                $(".win_container > .chicken").css("background-image", "url(../../files/img/hud_elements/Folha_T_Win.png)");
+                // $(".win_container > .chicken_2").css("background-image", "url(../../files/img/hud_elements/Folha_T.png)");
+                // $(".win_container > .chicken_3").css("background-image", "url(../../files/img/hud_elements/Folha_T.png)");
+                // $(".win_container > .chicken").css("transform","scaleX(-1)");
+                // $(".win_container > .chicken_2").css("transform","rotate(245deg)");
+                // $(".win_container > .chicken_3").css("transform","rotate(120deg)");
                 $(".win_container>.bg_container>.bg").css("border", "solid 3px rgb(" + t_color + ")");
                 $(".win_container>.bg_container>.bg").css("box-shadow", "inset 0px 0px 15px 7px  rgb(" + t_color + ")")
                 $(".win_container>.bg_container>.text").css("color", " rgb(" + t_color + ")")
                 $(".win_container>.bg_container>.bg").css("background-image", "url(../../files/img/hud_elements/Textura_T_2.png)");
-                $(".win_container > .chicken").css("display", "block").css("animation", "chickenIn 0.4s ease-out forwards");
-                $(".win_container > .chicken_2").css("display", "block").css("animation", "chickenIn 0.4s ease-out forwards");
-                $(".win_container > .chicken_3").css("display", "block").css("animation", "chickenIn 0.4s ease-out forwards"); 
+                // $(".win_container > .chicken").css("display", "block").css("animation", "chickenIn 0.4s ease-out forwards");
+                // $(".win_container > .chicken_2").css("display", "block").css("animation", "chickenIn 0.4s ease-out forwards");
+                // $(".win_container > .chicken_3").css("display", "block").css("animation", "chickenIn 0.4s ease-out forwards"); 
             }
+            $(".win_container > .chicken").css("display", "block").css("animation", "chickenIn 0.4s ease-out forwards");
             $(".win_container > .bg_container").css("width", "500px").css("transition", "width 0.3s ease-in 0.3s");
             $(".win_container > .bg_container > .text").text(name + " WINS!");
             $(".win_container > .bg_container > .text").css("transform", "translateY(0px)").css("transition", "transform 0.4s ease-out 0.6s");
@@ -1942,8 +1951,8 @@ function updatePage(data) {
         function stopAnimationWinner() {
 
             $(".win_container > .chicken").css("animation", "chickenOut 0.4s ease-out forwards");
-            $(".win_container > .chicken_2").css("animation", "chickenOut 0.4s ease-out forwards");
-            $(".win_container > .chicken_3").css("animation", "chickenOut 0.4s ease-out forwards");
+            // $(".win_container > .chicken_2").css("animation", "chickenOut 0.4s ease-out forwards");
+            // $(".win_container > .chicken_3").css("animation", "chickenOut 0.4s ease-out forwards");
             $(".win_container > .bg_container").css("width", "0px").css("transition", "width 0.3s ease-in 0.3s");
             $(".win_container > .bg_container > .text").css("transform", "translateY(-50px)").css("transition", "transform 0.4s ease-out 0s");
 
