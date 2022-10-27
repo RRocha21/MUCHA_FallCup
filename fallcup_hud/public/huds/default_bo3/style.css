@@ -2,7 +2,7 @@ html,
 body {
     margin: 0;
     padding: 0;
-    /* background: rgb(255, 153, 0); */
+    /* //background: rgb(255, 153, 0); */
     overflow: hidden;
     border-radius: 0px !important;
     font-family: "";
@@ -22,6 +22,14 @@ sub {
     -moz-transform: scale(0.8);
     -ms-transform: scale(0.8);
     -o-transform: scale(0.8);
+}
+
+.win_container > .chicken_2{
+    transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    -moz-transform: scaleX(-1);
+    -ms-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
 }
 
 .players_left_container {
@@ -102,12 +110,103 @@ sub {
 
 .win_container>.chicken {
     position: absolute;
-    bottom: 80px;
+    bottom: 60px;
     left: 140px;
     width: 220px;
     height: 220px;
     background-image: url(/files/img/hud_elements/win_ct_chicken.png);
-    background-size: 75%;
+    background-size: 90%;
+    rotate: 180deg;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: none;
+    opacity: 0;
+}
+
+.win_container>.chicken_2 {
+    position: absolute;
+    bottom:20px;
+    left: 70px;
+    width: 220px;
+    height: 220px;
+    background-image: url(/files/img/hud_elements/win_ct_chicken.png);
+    background-size: 90%;
+    rotate: 125deg;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: none;
+    opacity: 0;
+}
+
+.win_container>.chicken_3 {
+    position: absolute;
+    bottom: 30px;
+    left: 220px;
+    width: 220px;
+    height: 220px;
+    background-image: url(/files/img/hud_elements/win_ct_chicken.png);
+    background-size: 100%;
+    rotate: 235deg;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: none;
+    opacity: 0;
+}
+
+.win_container>.chicken_4 {
+    position: absolute;
+    bottom: 60px;
+    left: -50px;
+    width: 220px;
+    height: 220px;
+    background-image: url(/files/img/hud_elements/win_ct_chicken.png);
+    background-size: 90%;
+    rotate: 180deg;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: none;
+    opacity: 0;
+}
+
+.win_container>.chicken_5 {
+    position: absolute;
+    bottom: 20px;
+    left: 36px;
+    width: 220px;
+    height: 220px;
+    background-image: url(/files/img/hud_elements/win_ct_chicken.png);
+    background-size: 100%;
+    rotate: 245deg;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: none;
+    opacity: 0;
+}
+
+.win_container>.chicken_6 {
+    position: absolute;
+    bottom: 25px;
+    left: 245px;
+    width: 220px;
+    height: 220px;
+    background-image: url(/files/img/hud_elements/win_ct_chicken.png);
+    background-size: 100%;
+    rotate: 120deg;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: none;
+    opacity: 0;
+}
+
+.win_container>.chicken_7 {
+    position: absolute;
+    bottom: 60px;
+    right: -50px;
+    width: 220px;
+    height: 220px;
+    background-image: url(/files/img/hud_elements/win_ct_chicken.png);
+    background-size: 90%;
+    rotate: 180deg;
     background-repeat: no-repeat;
     background-position: center;
     display: none;
@@ -320,7 +419,7 @@ sub {
     position: absolute;
     background: rgba(0, 0, 0, 0.7);
     background-image: url(../../files/img/hud_elements/logo.png);
-    background-size: 70px;
+    background-size: 100%;
     background-repeat: no-repeat;
     background-position: center;
     right: 0px;
@@ -408,8 +507,9 @@ sub {
     bottom: 0px;
     z-index: 43;
     height: 56px;
+    background-position: center;
+    background-size: contain;
     text-shadow: 0px 0px 10px rgb(0 0 0 / 30%), 0px -5px 35px rgb(0 0 0 / 30%);
-    background: blue;
     /*border-bottom-right-radius: 10px;*/
     border-bottom-left-radius: 10px;
 }
@@ -445,10 +545,11 @@ sub {
     bottom: 0px;
     z-index: 43;
     height: 56px;
+    background-position: center;
+    background-size: contain;
     text-shadow: 0px 0px 10px rgb(0 0 0 / 30%), 0px -5px 35px rgb(0 0 0 / 30%);
     border-bottom-right-radius: 10px;
     /*border-bottom-left-radius: 35px; */
-    background: y;
 }
 
 
@@ -481,10 +582,6 @@ sub {
     border: solid 3px;
     border-radius: 7px;
     z-index: 51;
-    -webkit-border-radius: ;
-    -moz-border-radius: ;
-    -ms-border-radius: ;
-    -o-border-radius: ;
 }
 
 .block.win {
@@ -555,13 +652,59 @@ sub {
     z-index: 20;
 }
 
+.header_container>.left_fade {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 420px;
+    height: 86px;
+    z-index: 8;
+    border-radius: 20px;
+    -webkit-mask-image: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%);
+}
+
+.header_container>.left_fade>.left_inner {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 420px;
+    height: 86px;
+    z-index: 8;
+    border-radius: 20px;
+    background-size: 700px;
+    opacity: 0.6;
+}
+
+.header_container>.right_fade {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 420px;
+    height: 86px;
+    z-index: 8;
+    border-radius: 20px;
+    -webkit-mask-image: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%);
+}
+
+.header_container>.right_fade>.right_inner {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 420px;
+    height: 86px;
+    z-index: 8;
+    border-radius: 20px;
+    background-size: 700px;
+    opacity: 0.6;
+}
+
 .header_container>.inner {
     position: absolute;
     left: 0px;
     top: 0px;
     width: 960px;
     height: 86px;
-    z-index: 8;
+    z-index: 7;
     border-radius: 20px;
 }
 
@@ -798,7 +941,7 @@ sub {
     color: #fff;
     font-weight: bold;
     text-transform: uppercase;
-    line-height: 3.3;
+    line-height: 3.5;
     text-align: left;
     position: absolute;
     left: 50px;
@@ -815,7 +958,7 @@ sub {
     position: absolute;
     right: 39px;
     filter: invert(1);
-    top: 18px;
+    top: 20px;
     width: 24px;
     height: 24px;
     z-index: 77;
@@ -824,13 +967,14 @@ sub {
 .alerts_container>.left>.player {
     font-size: 23px;
     font-family: "Tungsten";
-    font-weight: n;
+    font-weight: 900;
     text-transform: uppercase;
     line-height: 1.35;
     text-align: right;
     position: absolute;
     right: 75px;
-    top: 15px;
+    color: #fff;
+    top: 17px;
     width: 170px;
     height: 34px;
     z-index: 36;
@@ -891,7 +1035,7 @@ sub {
     color: #fff;
     font-weight: bold;
     text-transform: uppercase;
-    line-height: 3.3;
+    line-height: 3.5;
     text-align: right;
     position: absolute;
     right: 50px;
@@ -917,13 +1061,14 @@ sub {
 .alerts_container>.right>.player {
     font-size: 23px;
     font-family: "Tungsten";
-    font-weight: n;
+    font-weight: 900;
+    color: #fff;
     text-transform: uppercase;
     line-height: 1.35;
     text-align: left;
     position: absolute;
     left: 75px;
-    top: 15px;
+    top: 16px;
     width: 170px;
     height: 34px;
     z-index: 36;
@@ -970,14 +1115,38 @@ sub {
     z-index: 208;
     border: solid 2px #fff;
     border-radius: 20px;
-    /*-webkit-mask-image: linear-gradient(to left, transparent 5%, black 20%, black 80%, transparent 95%);
-*/
+    /*-webkit-mask-image: linear-gradient(to left, transparent 5%, black 20%, black 80%, transparent 95%);*/
     -webkit-border-radius: 10%;
     -moz-border-radius: 20px;
     -ms-border-radius: 20px;
     -o-border-radius: 20px;
     -webkit-border-radius: 20px;
 }
+
+
+.observed_container>.observed_fade {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 690px;
+    height: 103.5px;
+    z-index: 2;
+    border-radius: 20px;
+    -webkit-mask-image: linear-gradient(90deg, rgba(0,0,0,0.0) 0%, rgba(0,0,0,1) 50%, rgba(0,0,0,0.0) 100%);
+}
+
+.observed_container>.observed_fade>.background_fade {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 690px;
+    height: 103.5px;
+    z-index: 1;
+    border-radius: 20px;
+    opacity: 0.6;
+}
+
+
 
 .observed_container>.picture {
     /* background-image: url("../../files/img/hud_elements/caps_example.png"); */
@@ -1323,6 +1492,7 @@ sub {
     background: linear-gradient(to right, rgba(0, 0, 0, 0.7) 80%, transparent 100%);
 }
 
+
 .players_left_container>.player_container>.Round_Kills {
     position: absolute;
     width: 22px;
@@ -1365,9 +1535,9 @@ sub {
 }
 
 .players_left_container>.player_container>.Round_Kills>.background>.frags {
-    font-size: 22px;
+    font-size: 20px;
     text-transform: uppercase;
-    font-family: "Anybody Condensed";
+    font-family: "Industry Inc Base";
     color: rgb(44, 43, 48);
     font-weight: 800;
     line-height: 1;
@@ -1559,7 +1729,7 @@ sub {
 .players_left_container>.player_container>.bottom_bar>.weapon_icon {
     position: absolute;
     top: 15px;
-    left: 14px;
+    right: 14px;
     height: 28px;
     width: 130px;
 }
@@ -1596,7 +1766,7 @@ sub {
     background-position: center;
     background-size: contain;
     position: absolute;
-    left: 135px;
+    left: 12px;
     top: 32px;
     z-index: 283;
     height: 16px;
@@ -1624,8 +1794,8 @@ sub {
     line-height: 1.4;
     text-align: left;
     position: absolute;
-    left: 157px;
-    top: 28px;
+    left: 32px;
+    top: 29px;
     z-index: 283;
     height: 20px;
     width: 45px;
@@ -1729,9 +1899,9 @@ sub {
 }
 
 .players_right_container>.player_container>.Round_Kills>.background>.frags {
-    font-size: 22px;
+    font-size: 20px;
     text-transform: uppercase;
-    font-family: "Anybody Condensed";
+    font-family: "Industry Inc Base";
     color: rgb(44, 43, 48);
     font-weight: 800;
     line-height: 1;
@@ -1923,7 +2093,7 @@ sub {
 .players_right_container>.player_container>.bottom_bar>.weapon_icon {
     position: absolute;
     top: 15px;
-    right: 14px;
+    left: 14px;
     height: 28px;
     width: 130px;
 }
@@ -1961,7 +2131,7 @@ sub {
     background-position: center;
     background-size: contain;
     position: absolute;
-    right: 135px;
+    right: 74px;
     top: 32px;
     z-index: 283;
     height: 16px;
@@ -1989,8 +2159,8 @@ sub {
     line-height: 1.4;
     text-align: right;
     position: absolute;
-    right: 157px;
-    top: 28px;
+    right: 95px;
+    top: 29px;
     z-index: 283;
     height: 20px;
     width: 45px;
@@ -2417,8 +2587,8 @@ sub {
 .map_picks {
     position: absolute;
     /*background: rgba(0, 0, 0, 0); */
-    left: 1500px;
-    top: 15px;
+    right: 28px;
+    top: 110px;
     width: 400px;
     height: 115px;
     z-index: 200;
@@ -3231,6 +3401,7 @@ sub {
     left: 0px;
     width: 24px;
     height: 30px;
+    border-top-left-radius: 10px;
     /*border-top-left-radius: 10px;
 border-top-right-radius: 10px;*/
 }
@@ -3252,7 +3423,9 @@ border-top-right-radius: 10px;*/
     bottom: 0px;
     left: 0px;
     width: 24px;
+    border-bottom-left-radius: 10px;
     height: 30px;
+    border-bottom-left-radius: 10px;
     /*border-bottom-left-radius: 10px;
 border-bottom-right-radius: 10px;*/
 }
@@ -4127,6 +4300,7 @@ border-bottom-right-radius: 10px;*/
     left: 336px;
     width: 24px;
     height: 30px;
+    border-top-right-radius: 10px;
     /*border-top-left-radius: 10px;
 border-top-right-radius: 10px;*/
 }
@@ -4149,6 +4323,7 @@ border-top-right-radius: 10px;*/
     left: 336px;
     width: 24px;
     height: 30px;
+    border-bottom-right-radius: 10px;
     /*border-bottom-left-radius: 10px;
 border-bottom-right-radius: 10px;*/
 }
@@ -5143,7 +5318,7 @@ border-bottom-right-radius: 10px;*/
 .dead {
     opacity: 70% !important;
     filter: grayscale(0.5);
-    width: 53% !important;
+    width: 45% !important;
     -webkit-filter: grayscale(0.4);
 }
 
@@ -5187,7 +5362,6 @@ border-bottom-right-radius: 10px;*/
 
 .alive {
     opacity: 100%;
-    width: 53% !important;
 }
 
 .invert {
