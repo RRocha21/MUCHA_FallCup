@@ -30,7 +30,6 @@ var bo = 3;
 
 // var t_color = "178,118,8";
 // var ct_color = "25,121,188";
-// var t_color = "254, 116, 2";
 var t_color = "204, 94, 2";
 var dark_t_color = "51, 22, 1";
 var lighter_t_color = "230, 106, 2";
@@ -41,6 +40,7 @@ var lighter_t_color = "230, 106, 2";
 var ct_color = "63, 140, 45";
 var dark_ct_color = "23, 51, 16";
 var lighter_ct_color = "87, 191, 61";
+
 
 // var ct_color = "26, 129, 203";
 // var dark_ct_color = "12, 58, 90";
@@ -286,15 +286,6 @@ function fillPlayers(teams) {
                 fillGrenadeLeft(teams.left.players[i], i, "left", teams.left.players.length);
                 $("#left").find("#player" + (i + 1)).css("opacity", "1");
                 $(".player_count_left").html(l_alive);
-                if(l_alive > 1){
-                    $(".topbar_i_counter>.title").html("PLAYERS ALIVE");
-                    $(".topbar_i_counter>.title").css("font-size", "17px");
-                    $(".topbar_i_counter>.title").css("line-height", "1.7");
-                }else{  
-                    $(".topbar_i_counter>.title").html("CLUTCH SITUATION");
-                    $(".topbar_i_counter>.title").css("font-size", "14px");
-                    $(".topbar_i_counter>.title").css("line-height", "2");
-                }
             }
 
             if (i == 4) {
@@ -323,17 +314,6 @@ function fillPlayers(teams) {
                 fillGrenadeRight(teams.right.players[i], i, "right", teams.left.players.length);
                 $("#right").find("#player" + (i + 1)).css("opacity", "1");
                 $(".player_count_right").html(r_alive);
-                if(r_alive > 1){
-                    $(".topbar_i_counter>.title").html("PLAYERS ALIVE");
-                    $(".topbar_i_counter>.title").css("font-size", "17px");
-                    $(".topbar_i_counter>.title").css("line-height", "1.7");
-                    $(".topbar_i_counter>.title").css("background", "rgba(0,0,0,0.7)");
-                }else{  
-                    $(".topbar_i_counter>.title").html("CLUTCH SITUATION");
-                    $(".topbar_i_counter>.title").css("font-size", "15px");
-                    $(".topbar_i_counter>.title").css("line-height", "2");
-                    $(".topbar_i_counter>.title").css("background", "rgb("+warning+ ")");
-                }
             }
             if (i == 4) {
                 r_grenade = 0;
@@ -539,10 +519,10 @@ function fillPlayer(player, nr, side, max) {
             $(".right_series").find(".win").css("background", "rgb(" + ct_color + " )");
             $(".right_series").find(".win").css("box-shadow", "rgb(" + ct_color + ") 0px 0px 15px 3px");
             $(".players_right_container>.player_container").css("background", "linear-gradient(to left, rgb(" + dark_ct_color + ") 100%, transparent 100%)");
-            $(".players_right_container>.player_container").css("background-image", "url(../../files/img/hud_elements/Textura_CT_2.png)");
+            $(".players_right_container>.player_container").css("background-image", "url(../../files/img/hud_elements/Textura_CT_3.png)");
             $(".header_container>.right_fade>.right_inner").css("background-image", "url(../../files/img/hud_elements/Linhas_CT.png)");
-            $(".firepower_money_right>.team_container").css("background-image", "url(../../files/img/hud_elements/Textura_CT_2.png)");
-            $(".firepower_money_right>.equip_container").css("background-image", "url(../../files/img/hud_elements/Textura_CT_2.png)");
+            $(".firepower_money_right>.team_container").css("background-image", "url(../../files/img/hud_elements/Textura_CT_3.png)");
+            $(".firepower_money_right>.equip_container").css("background-image", "url(../../files/img/hud_elements/Textura_CT_3.png)");
             $(".round_winner>.left_side_2").css("background-image", "url(../../files/img/hud_elements/Textura_CT_2.png)");
             $(".topbar_i_counter>.player_count_right").css("background-image", "url(../../files/img/hud_elements/Textura_CT_2.png)");
             $(".right_bonus").css("background-image", "url(../../files/img/hud_elements/Textura_CT_2.png)");
@@ -554,10 +534,10 @@ function fillPlayer(player, nr, side, max) {
             $(".right_series").find(".win").css("background", "rgb(" + t_color + ")");
             $(".right_series").find(".win").css("box-shadow", "rgb(" + t_color + ") 0px 0px 15px 3px");
             $(".players_right_container>.player_container").css("background", "linear-gradient(to left, rgb(" + dark_t_color + ") 100%, transparent 100%)");
-            $(".players_right_container>.player_container").css("background-image", "url(../../files/img/hud_elements/Textura_T_2.png)");
+            $(".players_right_container>.player_container").css("background-image", "url(../../files/img/hud_elements/Textura_T_3.png)");
             $(".header_container>.right_fade>.right_inner").css("background-image", "url(../../files/img/hud_elements/Linhas_T.png)");
-            $(".firepower_money_right>.team_container").css("background-image", "url(../../files/img/hud_elements/Textura_T_2.png)");
-            $(".firepower_money_right>.equip_container").css("background-image", "url(../../files/img/hud_elements/Textura_T_2.png)");
+            $(".firepower_money_right>.team_container").css("background-image", "url(../../files/img/hud_elements/Textura_T_3.png)");
+            $(".firepower_money_right>.equip_container").css("background-image", "url(../../files/img/hud_elements/Textura_T_3.png)");
             $(".round_winner>.left_side_2").css("background-image", "url(../../files/img/hud_elements/Textura_T_2.png)");
             $(".topbar_i_counter>.player_count_right").css("background-image", "url(../../files/img/hud_elements/Textura_T_2.png)");
             $(".right_bonus").css("background-image", "url(../../files/img/hud_elements/Textura_T_2.png)");
@@ -573,10 +553,10 @@ function fillPlayer(player, nr, side, max) {
             $(".left_series").find(".win").css("background", "rgb(" + ct_color + ")");
             $(".left_series").find(".win").css("box-shadow", "rgb(" + ct_color + ") 0px 0px 15px 3px");
             $(".players_left_container>.player_container").css("background", "linear-gradient(to right, rgb(" + dark_ct_color + ") 100%, transparent 100%)");
-            $(".players_left_container>.player_container").css("background-image", "url(../../files/img/hud_elements/Textura_CT_2.png)");
+            $(".players_left_container>.player_container").css("background-image", "url(../../files/img/hud_elements/Textura_CT_3.png)");
             $(".header_container>.left_fade>.left_inner").css("background-image", "url(../../files/img/hud_elements/Linhas_CT.png)");
-            $(".firepower_money_left>.team_container").css("background-image", "url(../../files/img/hud_elements/Textura_CT_2.png)");
-            $(".firepower_money_left>.equip_container").css("background-image", "url(../../files/img/hud_elements/Textura_CT_2.png)");
+            $(".firepower_money_left>.team_container").css("background-image", "url(../../files/img/hud_elements/Textura_CT_3.png)");
+            $(".firepower_money_left>.equip_container").css("background-image", "url(../../files/img/hud_elements/Textura_CT_3.png)");
             $(".round_winner>.left_side_1").css("background-image", "url(../../files/img/hud_elements/Textura_CT_2.png)");
             $(".topbar_i_counter>.player_count_left").css("background-image", "url(../../files/img/hud_elements/Textura_CT_2.png)");
             $(".left_bonus").css("background-image", "url(../../files/img/hud_elements/Textura_CT_2.png)");
@@ -588,10 +568,10 @@ function fillPlayer(player, nr, side, max) {
             $(".left_series").find(".win").css("background", "rgb(" + t_color + ")");
             $(".left_series").find(".win").css("box-shadow", "rgb(" + t_color + ") 0px 0px 15px 3px");
             $(".players_left_container>.player_container").css("background", "linear-gradient(to right, rgb(" + dark_t_color + ") 100%, transparent 100%)");
-            $(".players_left_container>.player_container").css("background-image", "url(../../files/img/hud_elements/Textura_T_2.png)");
+            $(".players_left_container>.player_container").css("background-image", "url(../../files/img/hud_elements/Textura_T_3.png)");
             $(".header_container>.left_fade>.left_inner").css("background-image", "url(../../files/img/hud_elements/Linhas_T.png)");   
-            $(".firepower_money_left>.team_container").css("background-image", "url(../../files/img/hud_elements/Textura_T_2.png)");
-            $(".firepower_money_left>.equip_container").css("background-image", "url(../../files/img/hud_elements/Textura_T_2.png)");
+            $(".firepower_money_left>.team_container").css("background-image", "url(../../files/img/hud_elements/Textura_T_3.png)");
+            $(".firepower_money_left>.equip_container").css("background-image", "url(../../files/img/hud_elements/Textura_T_3.png)");
             $(".round_winner>.left_side_1").css("background-image", "url(../../files/img/hud_elements/Textura_T_2.png)");
             $(".topbar_i_counter>.player_count_left").css("background-image", "url(../../files/img/hud_elements/Textura_T_2.png)");
             $(".left_bonus").css("background-image", "url(../../files/img/hud_elements/Textura_T_2.png)");
@@ -619,9 +599,9 @@ function fillPlayer(player, nr, side, max) {
     }
 
     if (statistics.round_kills > 0) {
-        $bottom.find(".k").html(statistics.kills);
+        $bottom.find(".k").html(statistics.round_kills);
     } else {
-        $bottom.find(".k").html(statistics.kills);
+        $bottom.find(".k").html(statistics.round_kills);
     }
 
     // + "<sup> (" + statistics.round_kills + ")</sup>"
@@ -669,7 +649,7 @@ function fillPlayer(player, nr, side, max) {
     if (player.observer_slot <= 5) {
 
         player_name = player.name;
-        if (player_name.length > 13) player_name = player_name.substring(0, 13);
+        if (player_name.length > 10) player_name = player_name.substring(0, 10);
         $top.find(".player_name").html(player_name.split(" ").join(""));
 
         $player.find(".number").html(player.observer_slot);
@@ -699,17 +679,17 @@ function fillPlayer(player, nr, side, max) {
             $top.find(".player_bar").removeClass('test');
         }
 
-        if (statistics.health <= 98) {
-            $top.find(".health_bar").css("border-radius", "10px 10px 0px 0px")
-            $top.find(".player_bar_shadow").css("border-radius", "10px 10px 0px 0px")
-        } else {
-            $top.find(".health_bar").css("border-radius", "10px 10px 0px 0px")
-            $top.find(".player_bar_shadow").css("border-radius", "10px 10px 0px 0px")
-        }
+        // if (statistics.health <= 98) {
+        //     $top.find(".health_bar").css("border-radius", "10px 10px 0px 0px")
+        //     $top.find(".player_bar_shadow").css("border-radius", "10px 10px 0px 0px")
+        // } else {
+        //     $top.find(".health_bar").css("border-radius", "10px 10px 0px 0px")
+        //     $top.find(".player_bar_shadow").css("border-radius", "10px 10px 0px 0px")
+        // }
 
     } else if (player.observer_slot < 10) {
         player_name = player.name;
-        if (player_name.length > 13) player_name = player_name.substring(0, 13);
+        if (player_name.length > 10) player_name = player_name.substring(0, 10);
         $top.find(".player_name").html(player_name.split(" ").join(""));
 
         $player.find(".number").html(player.observer_slot);
@@ -731,13 +711,13 @@ function fillPlayer(player, nr, side, max) {
             $top.find(".player_bar").removeClass('test');
         }
 
-        if (statistics.health <= 98) {
-            $top.find(".health_bar").css("border-radius", "10px 10px 0px 0px")
-            $top.find(".player_bar_shadow").css("border-radius", "10px 10px 0px 0px")
-        } else {
-            $top.find(".health_bar").css("border-radius", " 10px 10px 0px 0px")
-            $top.find(".player_bar_shadow").css("border-radius", "10px 10px 0px 0px")
-        }
+        // if (statistics.health <= 98) {
+        //     $top.find(".health_bar").css("border-radius", "10px 10px 0px 0px")
+        //     $top.find(".player_bar_shadow").css("border-radius", "10px 10px 0px 0px")
+        // } else {
+        //     $top.find(".health_bar").css("border-radius", " 10px 10px 0px 0px")
+        //     $top.find(".player_bar_shadow").css("border-radius", "10px 10px 0px 0px")
+        // }
 
         if (statistics.health == 0) {
             var flash_amount = 0;
@@ -751,7 +731,7 @@ function fillPlayer(player, nr, side, max) {
     } else if (player.observer_slot == 10) {
 
         player_name = player.name;
-        if (player_name.length > 13) player_name = player_name.substring(0, 13);
+        if (player_name.length > 10) player_name = player_name.substring(0, 10);
         $top.find(".player_name").html(player_name.split(" ").join(""));
 
         $player.find(".number").html("0");
@@ -774,13 +754,13 @@ function fillPlayer(player, nr, side, max) {
             $top.find(".player_bar").removeClass('test');
         }
 
-        if (statistics.health <= 98) {
-            $top.find(".health_bar").css("border-radius", "10px 10px 0px 0px")
-            $top.find(".player_bar_shadow").css("border-radius", "10px 10px 0px 0px")
-        } else {
-            $top.find(".health_bar").css("border-radius", " 10px 10px 0px 0px")
-            $top.find(".player_bar_shadow").css("border-radius", "10px 10px 0px 0px")
-        }
+        // if (statistics.health <= 98) {
+        //     $top.find(".health_bar").css("border-radius", "10px 10px 0px 0px")
+        //     $top.find(".player_bar_shadow").css("border-radius", "10px 10px 0px 0px")
+        // } else {
+        //     $top.find(".health_bar").css("border-radius", " 10px 10px 0px 0px")
+        //     $top.find(".player_bar_shadow").css("border-radius", "10px 10px 0px 0px")
+        // }
 
         if (statistics.health == 0) {
             var flash_amount = 0;
@@ -821,30 +801,32 @@ function fillPlayer(player, nr, side, max) {
         let view = "";
         let type = weapon.type;
 
-        if (type != "C4" && type != "Knife") {
-            view += weapon.state == "active" ? "checked" : "";
-            if (type == "Grenade") {
-                for (let x = 0; x < weapon.ammo_reserve; x++) {
-                    $bottom.find(".grenades").append($("<img />").attr("src", "/files/img/grenades/weapon_" + name + ".png").addClass(view));
-                }
-            } else if (type) {
-                view += side == "right" ? " img-hor" : "";
-                if (type == "Pistol") {
-
-                    if (side == "right") {
-                        $top.find(".weapon_icon").prepend($("<img />").attr("src", "/files/img/weapons/" + name + ".png").addClass("invert").addClass(view));
-                    } else {
-                        $top.find(".weapon_icon").prepend($("<img align='right' />").attr("src", "/files/img/weapons/" + name + ".png").addClass("invert").addClass(view));
+        if (weapon.state == "active") {
+            if (type != "C4" && type != "Knife") {
+                view += weapon.state == "active" ? "checked" : "";
+                if (type == "Grenade") {
+                    for (let x = 0; x < weapon.ammo_reserve; x++) {
+                        if (side == "right") {
+                            $bottom.find(".weapon_icon").append($("<img align='right'/>").attr("src", "/files/img/grenades/weapon_" + name + ".png").addClass(view));
+                        } else {
+                            $bottom.find(".weapon_icon").append($("<img align='left'/>").attr("src", "/files/img/grenades/weapon_" + name + ".png").addClass(view));
+                        }
                     }
-
-                } else {
-
-                    if (side == "right") {
-                        $bottom.find(".weapon_icon").prepend($("<img />").attr("src", "/files/img/weapons/" + name + ".png").addClass("invert").addClass(view));
+                } else if (type) {
+                    view += side == "right" ? " img-hor" : "";
+                    if (type == "Pistol") {
+                        if (side == "right") {
+                            $bottom.find(".weapon_icon").prepend($("<img align='right' />").attr("src", "/files/img/weapons/" + name + ".png").addClass("invert").addClass(view));
+                        } else {
+                            $bottom.find(".weapon_icon").prepend($("<img align='left' />").attr("src", "/files/img/weapons/" + name + ".png").addClass("invert").addClass(view));
+                        }
                     } else {
-                        $bottom.find(".weapon_icon").prepend($("<img align='right' />").attr("src", "/files/img/weapons/" + name + ".png").addClass("invert").addClass(view));
+                        if (side == "right") {
+                            $bottom.find(".weapon_icon").prepend($("<img align='right' />").attr("src", "/files/img/weapons/" + name + ".png").addClass("invert").addClass(view));
+                        } else {
+                            $bottom.find(".weapon_icon").prepend($("<img align='left' />").attr("src", "/files/img/weapons/" + name + ".png").addClass("invert").addClass(view));
+                        }
                     }
-
                 }
             }
         }
@@ -852,7 +834,6 @@ function fillPlayer(player, nr, side, max) {
             $top.find(".bomb_defuse").html($("<img width='16px' />").attr("src", "/files/img/elements/bomb.png").addClass("invert_brightness"));
         }
     }
-
 
     if (!start_money[steamid]) {
         start_money[steamid] = statistics.money;
@@ -903,9 +884,6 @@ function updatePage(data) {
     var matchup = data.getMatchType();
     var match = data.getMatch();
 
-    var map = data.map();
-    var map_text = map.name.slice(3);
-
     map1 = match.map_pick.map1; // Map 1 Name
     map2 = match.map_pick.map2; // Map 2 Name
     map3 = match.map_pick.map3; // Map 3 Name
@@ -921,15 +899,8 @@ function updatePage(data) {
     map3_res2 = match.map_3_res.map_right_res;
 
     if (matchup && matchup.toLowerCase() != "none") {
-        bo = 3;
-    } else {
-        bo = 1;
-        var map = data.map();
-        var map_text = map.name.slice(3);
-        map3 = map_text;
-    }
 
-    if (matchup && matchup.toLowerCase() != "none") {
+
         var block = $("<div class='block'></div>");
         var left_bl = $("<div></div>");
         var right_bl = $("<div></div>");
@@ -1212,7 +1183,6 @@ function updatePage(data) {
         lighter_right_color = lighter_t_color;
         dark_left_color = dark_ct_color;
         dark_right_color = dark_t_color;
-        
 
         $(".header_container>.inner").css("background", "linear-gradient(90deg, rgb(" + dark_ct_color + ") 0%, rgb(" + dark_t_color + ") 100%)");
     } else if (teams.left.side == "t" && teams.right.side == "ct") {
@@ -1423,7 +1393,7 @@ function updatePage(data) {
         $(".right_bonus>.bonus_box_4").css("box-shadow", "0px 0px 10px 2px  rgb(" + right_color + ")");
     }
     $(".right_bonus>.bonus_amount").html("$" + money_bonus_right);
-    $(".right_bonus>.bonus_amount").css("color", "rgb(" + lighter_right_color + ")");
+    $(".right_bonus>.bonus_amount").css("color", "rgb(" + right_color + ")");
 
 
     $(".left_bonus>.bonus_text>.real_text").html("<font color='#fff'> LOSS BONUS </font>");
@@ -1484,7 +1454,7 @@ function updatePage(data) {
     }
 
     $(".left_bonus>.bonus_amount").html("$" + money_bonus_left);
-    $(".left_bonus>.bonus_amount").css("color", "rgb(" + lighter_left_color + ")");
+    $(".left_bonus>.bonus_amount").css("color", "rgb(" + left_color + ")");
 
     /* LOSS BONUS FINITO*/
 
@@ -1503,8 +1473,8 @@ function updatePage(data) {
 
     $(".firepower_money_left>.team_container>.true_money").html("$" + left_team_value);
     $(".firepower_money_left>.equip_container>.true_money").html("$" + left.equip_value);
-    $(".firepower_money_left>.team_container>.true_money").css("color", "rgb(" + lighter_left_color + ")");
-    $(".firepower_money_left>.equip_container>.true_money").css("color", "rgb(" + lighter_left_color + ")");
+    $(".firepower_money_left>.team_container>.true_money").css("color", "rgb(" + left_color + ")");
+    $(".firepower_money_left>.equip_container>.true_money").css("color", "rgb(" + left_color + ")");
 
     $(".firepower_money_right>.team_container>.text_money>.text_true").html("<font color='#fff'>TEAM MONEY</font>");
     $(".firepower_money_right>.equip_container>.text_money>.text_true").html("<font color='#fff'>EQUIPMENT MONEY</font>");
@@ -1519,8 +1489,8 @@ function updatePage(data) {
 
     $(".firepower_money_right>.team_container>.true_money").html("$" + right_team_value);
     $(".firepower_money_right>.equip_container>.true_money").html("$" + right.equip_value);
-    $(".firepower_money_right>.team_container>.true_money").css("color", "rgb(" + lighter_right_color + ")");
-    $(".firepower_money_right>.equip_container>.true_money").css("color", "rgb(" + lighter_right_color + ")");
+    $(".firepower_money_right>.team_container>.true_money").css("color", "rgb(" + right_color + ")");
+    $(".firepower_money_right>.equip_container>.true_money").css("color", "rgb(" + right_color + ")");
 
 
     /* EQUIPMENT MONEY FINITO*/
@@ -1996,8 +1966,8 @@ function updatePage(data) {
             // $(".win_container > .chicken_2").css("animation", "chickenOut 0.4s ease-out forwards");
             // $(".win_container > .chicken_3").css("animation", "chickenOut 0.4s ease-out forwards");
             // $(".win_container > .bg_container").css("width", "0px").css("transition", "width 0s ease-in 0.3s");
-            $(".win_container > .bg_container ").css("transform", "translateY(-100px)").css("transition", "transform 0.3s ease-out 0s");
-            $(".win_container > .bg_container > .text").css("transform", "translateY(-50px)").css("transition", "transform 0.3s ease-out 0s");
+            $(".win_container > .bg_container ").css("transform", "translateY(-100px)").css("transition", "transform 1s ease-out 0.5s");
+            $(".win_container > .bg_container > .text").css("transform", "translateY(-50px)").css("transition", "transform 1s ease-out 0.5s");
 
         }
 
