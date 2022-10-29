@@ -2112,7 +2112,7 @@ function updatePage(data) {
                 showSpam();
                 hideBonus();
                 if (bo == 1) {
-                    //hidePickem();
+                    hidePickem();
                 } else if (bo == 3) {
                     hidePickem_1();
                     hidePickem_2();
