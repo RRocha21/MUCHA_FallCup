@@ -25,7 +25,7 @@ var pick = "DECIDER"; // Current map pick
 
 var playing = 2;
 
-var bo = 3;
+var bo = 0;
 /* Cores para Hud */
 
 // var t_color = "178,118,8";
@@ -2112,7 +2112,7 @@ function updatePage(data) {
                 showSpam();
                 hideBonus();
                 if (bo == 1) {
-                    //hidePickem();
+                    hidePickem();
                 } else if (bo == 3) {
                     hidePickem_1();
                     hidePickem_2();
