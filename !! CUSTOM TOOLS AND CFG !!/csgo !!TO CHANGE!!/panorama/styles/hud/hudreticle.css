@@ -300,32 +300,32 @@ CSGOHudReticle Label
                
 .playerid--team-ct .playerid__icon--arrow
 {
-	color: #1a81cb !important;
-	wash-color-fast: #1a81cb !important;
+	color: #00d2cf !important;
+	wash-color-fast: #00d2cf !important;
 	                                    
 }
 
                       
 .playerid--team-t .playerid__icon--arrow
 {
-	color: #da920b !important;
-	wash-color-fast: #da920b !important;
+	color: #ffce00 !important;
+	wash-color-fast: #ffce00 !important;
 }
 
                
 .playerid--team-ct .playerid__icon--arrowborder
 {
     -s2-mix-blend-mode: normal;
-	color: #1a81cb !important;
-	wash-color-fast: #1a81cb !important;
+	color: #00d2cf !important;
+	wash-color-fast: #00d2cf !important;
 }
 
                       
 .playerid--team-t .playerid__icon--arrowborder
 {
     -s2-mix-blend-mode: normal;
-	color: #da920b !important;
-	wash-color-fast: #da920b !important;
+	color: #ffce00 !important;
+	wash-color-fast: #ffce00 !important;
 }
 
                      
