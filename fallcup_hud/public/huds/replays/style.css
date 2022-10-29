@@ -578,7 +578,7 @@ sub {
     z-index: 8;
     /* border-radius: 20px; */
     background-size: 700px;
-    opacity: 0.6;
+    opacity: 0.35;
 }
 
 .header_container>.right_fade {
@@ -601,7 +601,7 @@ sub {
     z-index: 8;
     /* border-radius: 20px; */
     background-size: 700px;
-    opacity: 0.6;
+    opacity: 0.35;
 }
 
 .header_container>.inner {
@@ -1049,7 +1049,7 @@ sub {
     height: 103.5px;
     z-index: 1;
     /* border-radius: 20px; */
-    opacity: 0.6;
+    opacity: 0.35;
 }
 
 .observed_container>.picture {
