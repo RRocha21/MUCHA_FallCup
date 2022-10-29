@@ -276,8 +276,6 @@ let r_team_value = 0;
 var left_team_value = 0;
 var right_team_value = 0;
 
-var clutch = 0;
-
 let left_alive = 0;
 let right_alive = 0;
 
@@ -290,7 +288,7 @@ function fillPlayers(teams) {
                 fillPlayer(teams.left.players[i], i, "left", teams.left.players.length);
                 fillGrenadeLeft(teams.left.players[i], i, "left", teams.left.players.length);
                 $("#left").find("#player" + (i + 1)).css("opacity", "1");
-                $(".player_count_left").html(l_alive);                
+                $(".player_count_left").html(l_alive);
             }
 
             left_alive = l_alive;
@@ -320,7 +318,6 @@ function fillPlayers(teams) {
                 fillGrenadeRight(teams.right.players[i], i, "right", teams.left.players.length);
                 $("#right").find("#player" + (i + 1)).css("opacity", "1");
                 $(".player_count_right").html(r_alive);
-                if((r_alive > 1) && (clutch == 0)){
             }
 
             right_alive = r_alive;
@@ -341,27 +338,14 @@ function fillPlayers(teams) {
             }
         }
     }
-    if((left_alive > 1) && (clutch == 0)){
+    if((left_alive > 1) && (right_alive > 1)){
         $(".topbar_i_counter>.title").html("PLAYERS ALIVE");
         $(".topbar_i_counter>.title").css("font-size", "17px");
         $(".topbar_i_counter>.title").css("line-height", "1.7");
         $(".topbar_i_counter>.title").css("background", "rgba(0,0,0,0.7)");
     }else{  
-        clutch = 1;
         $(".topbar_i_counter>.title").html("CLUTCH SITUATION");
-        $(".topbar_i_counter>.title").css("font-size", "15px");
-        $(".topbar_i_counter>.title").css("line-height", "2");
-        $(".topbar_i_counter>.title").css("background", "rgb("+warning+ ")");
-    }
-    if((right_alive > 1) && (clutch == 0)){
-        $(".topbar_i_counter>.title").html("PLAYERS ALIVE");
-        $(".topbar_i_counter>.title").css("font-size", "17px");
-        $(".topbar_i_counter>.title").css("line-height", "1.7");
-        $(".topbar_i_counter>.title").css("background", "rgba(0,0,0,0.7)");
-    }else{  
-        clutch = 1;
-        $(".topbar_i_counter>.title").html("CLUTCH SITUATION");
-        $(".topbar_i_counter>.title").css("font-size", "15px");
+        $(".topbar_i_counter>.title").css("font-size", "14px");
         $(".topbar_i_counter>.title").css("line-height", "2");
         $(".topbar_i_counter>.title").css("background", "rgb("+warning+ ")");
     }
@@ -713,11 +697,11 @@ function fillPlayer(player, nr, side, max) {
         }
 
         // if (statistics.health <= 98) {
-        //     // $top.find(".health_bar").css("border-radius", "10px 10px 0px 0px")
-        //     // $top.find(".player_bar_shadow").css("border-radius", "10px 10px 0px 0px")
+        //     $top.find(".health_bar").css("border-radius", "10px 10px 0px 0px")
+        //     $top.find(".player_bar_shadow").css("border-radius", "10px 10px 0px 0px")
         // } else {
-        //     // $top.find(".health_bar").css("border-radius", "10px 10px 0px 0px")
-        //     // $top.find(".player_bar_shadow").css("border-radius", "10px 10px 0px 0px")
+        //     $top.find(".health_bar").css("border-radius", "10px 10px 0px 0px")
+        //     $top.find(".player_bar_shadow").css("border-radius", "10px 10px 0px 0px")
         // }
 
     } else if (player.observer_slot < 10) {
@@ -940,7 +924,6 @@ function updatePage(data) {
         var map = data.map();
         var map_text = map.name.slice(3);
         map3 = map_text;
-        // console.log(map3);
     }
 
     if (matchup && matchup.toLowerCase() != "none") {
@@ -1961,7 +1944,7 @@ function updatePage(data) {
         function startAnimationWinner(side, name, gameside) {
 
             if (gameside == "ct") {
-                // $(".win_container > .chicken").css("background-image", "url(../../files/img/hud_elements/Folha_CT_Win.png)");
+                $(".win_container > .chicken").css("background-image", "url(../../files/img/hud_elements/Folha_CT_Win.png)");
                 //$(".win_container > .chicken").css("background-image", "url(/files/img/hud_elements/win_ct_chicken.png)");
                 // $(".win_container > .chicken_4").css("background-image", "url(../../files/img/hud_elements/Folha_CT.png)");
                 // $(".win_container > .chicken_5").css("background-image", "url(../../files/img/hud_elements/Folha_CT.png)");
@@ -1981,7 +1964,7 @@ function updatePage(data) {
                 // $(".win_container > .chicken_7").css("display", "block").css("animation", "chickenIn 0.4s ease-out forwards");
             } else if (gameside == "t") {
                 //$(".win_container > .chicken").css("background-image", "url(/files/img/hud_elements/win_t_chicken.png)");
-                // $(".win_container > .chicken").css("background-image", "url(../../files/img/hud_elements/Folha_T_Win.png)");
+                $(".win_container > .chicken").css("background-image", "url(../../files/img/hud_elements/Folha_T_Win.png)");
                 // $(".win_container > .chicken_2").css("background-image", "url(../../files/img/hud_elements/Folha_T.png)");
                 // $(".win_container > .chicken_3").css("background-image", "url(../../files/img/hud_elements/Folha_T.png)");
                 // $(".win_container > .chicken").css("transform","scaleX(-1)");
@@ -2010,8 +1993,8 @@ function updatePage(data) {
             // $(".win_container > .chicken_2").css("animation", "chickenOut 0.4s ease-out forwards");
             // $(".win_container > .chicken_3").css("animation", "chickenOut 0.4s ease-out forwards");
             // $(".win_container > .bg_container").css("width", "0px").css("transition", "width 0s ease-in 0.3s");
-            $(".win_container > .bg_container ").css("transform", "translateY(-100px)").css("transition", "transform 1s ease-out 0.5s");
-            $(".win_container > .bg_container > .text").css("transform", "translateY(-50px)").css("transition", "transform 1s ease-out 0.5s");
+            $(".win_container > .bg_container ").css("transform", "translateY(-100px)").css("transition", "transform 0.3s ease-out 0s");
+            $(".win_container > .bg_container > .text").css("transform", "translateY(-50px)").css("transition", "transform 0.3s ease-out 0s");
 
         }
 

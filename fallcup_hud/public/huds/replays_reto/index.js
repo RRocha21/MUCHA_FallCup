@@ -276,6 +276,9 @@ let r_team_value = 0;
 var left_team_value = 0;
 var right_team_value = 0;
 
+let left_alive = 0;
+let right_alive = 0;
+
 function fillPlayers(teams) {
     if (teams.left.players) {
         for (var i = 0; i < 5; i++) {
@@ -288,6 +291,7 @@ function fillPlayers(teams) {
                 $(".player_count_left").html(l_alive);
             }
 
+            left_alive = l_alive;
             if (i == 4) {
                 l_grenade = 0;
                 l_smoke = 0;
@@ -315,6 +319,8 @@ function fillPlayers(teams) {
                 $("#right").find("#player" + (i + 1)).css("opacity", "1");
                 $(".player_count_right").html(r_alive);
             }
+
+            right_alive = r_alive;
             if (i == 4) {
                 r_grenade = 0;
                 r_smoke = 0;
@@ -331,6 +337,17 @@ function fillPlayers(teams) {
 
             }
         }
+    }
+    if((left_alive > 1) && (right_alive > 1)){
+        $(".topbar_i_counter>.title").html("PLAYERS ALIVE");
+        $(".topbar_i_counter>.title").css("font-size", "17px");
+        $(".topbar_i_counter>.title").css("line-height", "1.7");
+        $(".topbar_i_counter>.title").css("background", "rgba(0,0,0,0.7)");
+    }else{  
+        $(".topbar_i_counter>.title").html("CLUTCH SITUATION");
+        $(".topbar_i_counter>.title").css("font-size", "14px");
+        $(".topbar_i_counter>.title").css("line-height", "2");
+        $(".topbar_i_counter>.title").css("background", "rgb("+warning+ ")");
     }
 }
 
@@ -519,10 +536,10 @@ function fillPlayer(player, nr, side, max) {
             $(".right_series").find(".win").css("background", "rgb(" + ct_color + " )");
             $(".right_series").find(".win").css("box-shadow", "rgb(" + ct_color + ") 0px 0px 15px 3px");
             $(".players_right_container>.player_container").css("background", "linear-gradient(to left, rgb(" + dark_ct_color + ") 100%, transparent 100%)");
-            $(".players_right_container>.player_container").css("background-image", "url(../../files/img/hud_elements/Textura_CT_3.png)");
+            $(".players_right_container>.player_container").css("background-image", "url(../../files/img/hud_elements/Textura_CT_2.png)");
             $(".header_container>.right_fade>.right_inner").css("background-image", "url(../../files/img/hud_elements/Linhas_CT.png)");
-            $(".firepower_money_right>.team_container").css("background-image", "url(../../files/img/hud_elements/Textura_CT_3.png)");
-            $(".firepower_money_right>.equip_container").css("background-image", "url(../../files/img/hud_elements/Textura_CT_3.png)");
+            $(".firepower_money_right>.team_container").css("background-image", "url(../../files/img/hud_elements/Textura_CT_2.png)");
+            $(".firepower_money_right>.equip_container").css("background-image", "url(../../files/img/hud_elements/Textura_CT_2.png)");
             $(".round_winner>.left_side_2").css("background-image", "url(../../files/img/hud_elements/Textura_CT_2.png)");
             $(".topbar_i_counter>.player_count_right").css("background-image", "url(../../files/img/hud_elements/Textura_CT_2.png)");
             $(".right_bonus").css("background-image", "url(../../files/img/hud_elements/Textura_CT_2.png)");
@@ -534,10 +551,10 @@ function fillPlayer(player, nr, side, max) {
             $(".right_series").find(".win").css("background", "rgb(" + t_color + ")");
             $(".right_series").find(".win").css("box-shadow", "rgb(" + t_color + ") 0px 0px 15px 3px");
             $(".players_right_container>.player_container").css("background", "linear-gradient(to left, rgb(" + dark_t_color + ") 100%, transparent 100%)");
-            $(".players_right_container>.player_container").css("background-image", "url(../../files/img/hud_elements/Textura_T_3.png)");
+            $(".players_right_container>.player_container").css("background-image", "url(../../files/img/hud_elements/Textura_T_2.png)");
             $(".header_container>.right_fade>.right_inner").css("background-image", "url(../../files/img/hud_elements/Linhas_T.png)");
-            $(".firepower_money_right>.team_container").css("background-image", "url(../../files/img/hud_elements/Textura_T_3.png)");
-            $(".firepower_money_right>.equip_container").css("background-image", "url(../../files/img/hud_elements/Textura_T_3.png)");
+            $(".firepower_money_right>.team_container").css("background-image", "url(../../files/img/hud_elements/Textura_T_2.png)");
+            $(".firepower_money_right>.equip_container").css("background-image", "url(../../files/img/hud_elements/Textura_T_2.png)");
             $(".round_winner>.left_side_2").css("background-image", "url(../../files/img/hud_elements/Textura_T_2.png)");
             $(".topbar_i_counter>.player_count_right").css("background-image", "url(../../files/img/hud_elements/Textura_T_2.png)");
             $(".right_bonus").css("background-image", "url(../../files/img/hud_elements/Textura_T_2.png)");
@@ -553,10 +570,10 @@ function fillPlayer(player, nr, side, max) {
             $(".left_series").find(".win").css("background", "rgb(" + ct_color + ")");
             $(".left_series").find(".win").css("box-shadow", "rgb(" + ct_color + ") 0px 0px 15px 3px");
             $(".players_left_container>.player_container").css("background", "linear-gradient(to right, rgb(" + dark_ct_color + ") 100%, transparent 100%)");
-            $(".players_left_container>.player_container").css("background-image", "url(../../files/img/hud_elements/Textura_CT_3.png)");
+            $(".players_left_container>.player_container").css("background-image", "url(../../files/img/hud_elements/Textura_CT_2.png)");
             $(".header_container>.left_fade>.left_inner").css("background-image", "url(../../files/img/hud_elements/Linhas_CT.png)");
-            $(".firepower_money_left>.team_container").css("background-image", "url(../../files/img/hud_elements/Textura_CT_3.png)");
-            $(".firepower_money_left>.equip_container").css("background-image", "url(../../files/img/hud_elements/Textura_CT_3.png)");
+            $(".firepower_money_left>.team_container").css("background-image", "url(../../files/img/hud_elements/Textura_CT_2.png)");
+            $(".firepower_money_left>.equip_container").css("background-image", "url(../../files/img/hud_elements/Textura_CT_2.png)");
             $(".round_winner>.left_side_1").css("background-image", "url(../../files/img/hud_elements/Textura_CT_2.png)");
             $(".topbar_i_counter>.player_count_left").css("background-image", "url(../../files/img/hud_elements/Textura_CT_2.png)");
             $(".left_bonus").css("background-image", "url(../../files/img/hud_elements/Textura_CT_2.png)");
@@ -568,10 +585,10 @@ function fillPlayer(player, nr, side, max) {
             $(".left_series").find(".win").css("background", "rgb(" + t_color + ")");
             $(".left_series").find(".win").css("box-shadow", "rgb(" + t_color + ") 0px 0px 15px 3px");
             $(".players_left_container>.player_container").css("background", "linear-gradient(to right, rgb(" + dark_t_color + ") 100%, transparent 100%)");
-            $(".players_left_container>.player_container").css("background-image", "url(../../files/img/hud_elements/Textura_T_3.png)");
+            $(".players_left_container>.player_container").css("background-image", "url(../../files/img/hud_elements/Textura_T_2.png)");
             $(".header_container>.left_fade>.left_inner").css("background-image", "url(../../files/img/hud_elements/Linhas_T.png)");   
-            $(".firepower_money_left>.team_container").css("background-image", "url(../../files/img/hud_elements/Textura_T_3.png)");
-            $(".firepower_money_left>.equip_container").css("background-image", "url(../../files/img/hud_elements/Textura_T_3.png)");
+            $(".firepower_money_left>.team_container").css("background-image", "url(../../files/img/hud_elements/Textura_T_2.png)");
+            $(".firepower_money_left>.equip_container").css("background-image", "url(../../files/img/hud_elements/Textura_T_2.png)");
             $(".round_winner>.left_side_1").css("background-image", "url(../../files/img/hud_elements/Textura_T_2.png)");
             $(".topbar_i_counter>.player_count_left").css("background-image", "url(../../files/img/hud_elements/Textura_T_2.png)");
             $(".left_bonus").css("background-image", "url(../../files/img/hud_elements/Textura_T_2.png)");

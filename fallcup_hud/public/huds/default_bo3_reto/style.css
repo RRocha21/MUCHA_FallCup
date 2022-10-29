@@ -7,6 +7,7 @@ body {
     border-radius: 0px !important;
     font-family: "";
     font-weight: 500;
+    /* background: #9ef8df; */
 }
 
 sub {
@@ -809,10 +810,10 @@ sub {
     height: 60px;
     -webkit-mask-image: linear-gradient(to left, black 0%, black 100%);
     /* border-radius: 20px; */
-    -webkit-border-radius: 20px;
+    /* -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
     -ms-border-radius: 20px;
-    -o-border-radius: 20px;
+    -o-border-radius: 20px; */
 }
 
 .alerts_container>.left {
@@ -1402,9 +1403,9 @@ sub {
 .players_left_container>.player_container>.Round_Kills {
     position: absolute;
     width: 22px;
-    height: 58px;
+    height: 84px;
     right: -22px;
-    top: 14px;
+    top: 0px;
     z-index: 183;
     transform: all 0.5s ease 0.0s;
     overflow: hidden;
@@ -1418,7 +1419,7 @@ sub {
     background-color: rgb(255, 255, 255);
     position: absolute;
     width: 22px;
-    height: 58px;
+    height: 100%;
     left: 0px;
     top: 0px;
     z-index: 184;
@@ -1436,7 +1437,7 @@ sub {
     height: 19px;
     width: 18px;
     left: 2px;
-    top: 8px;
+    top: 20px;
     z-index: 185;
 }
 
@@ -1453,7 +1454,7 @@ sub {
     height: 18px;
     width: 18px;
     left: 2px;
-    bottom: 8px;
+    bottom: 20px;
     z-index: 185;
 }
 
@@ -1766,9 +1767,9 @@ sub {
 .players_right_container>.player_container>.Round_Kills {
     position: absolute;
     width: 22px;
-    height: 58px;
+    height: 84px;
     left: -22px;
-    top: 14px;
+    top: 0px;
     z-index: 183;
     transform: all 0.5s ease 0.0s;
     overflow: hidden;
@@ -1782,7 +1783,7 @@ sub {
     background-color: rgb(255, 255, 255);
     position: absolute;
     width: 22px;
-    height: 58px;
+    height: 84px;
     left: 0px;
     top: 0px;
     z-index: 184;
@@ -1800,7 +1801,7 @@ sub {
     height: 19px;
     width: 18px;
     right: 1px;
-    top: 8px;
+    top:20px;
     z-index: 185;
 }
 
@@ -1815,9 +1816,9 @@ sub {
     text-align: center;
     position: absolute;
     height: 18px;
-    width: 18px;
+    width: 20px;
     right: 1px;
-    bottom: 8px;
+    bottom: 20px;
     z-index: 185;
 }
 
