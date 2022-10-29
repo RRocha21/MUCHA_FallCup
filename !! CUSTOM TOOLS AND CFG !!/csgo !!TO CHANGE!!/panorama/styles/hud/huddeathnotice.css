@@ -1,9 +1,9 @@
                                                 
 
                                                                   
-@define CTColor: #00d2cf;
-@define TColor: #ffce00;
-@define FadedColor: #031023;
+@define CTColor: #3f8c2d;
+@define TColor: #cc5e02;
+@define FadedColor: #000000;
 
                             
 @define DeathNoticeLifetime: 5.0;				                                       
@@ -84,7 +84,7 @@ CSGOHudDeathNotice Label
 	height: 100%;
 	                              
 	                                                                                                                                                                                                                                                      
-	background-color: #031023;
+	background-color: #000000;
 	opacity: 0.65;
 }
 
